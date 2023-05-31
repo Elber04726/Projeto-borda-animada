@@ -1,0 +1,41 @@
+.card{
+    width: 200px;
+    height: 300px;
+    background: #07182e;
+    position: relative;
+    overflow: hidden;
+    left: 585px;
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    width: 200px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255),rgb(255, 48,255));
+    height: 130%;
+    animation: rotBGimg 4s linear infinite;
+    transition:  all .3s linear;
+}
+
+@keyframes rotBGimg {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform:  rotate(360deg);
+    }
+}
+
+.card::after{
+    content: '';
+    position: absolute;
+    background: #07182e;
+    inset: 5px;
+}
+
+.border{
+    text-align: center;
+    color: blue;
+    font-size: 40px;
+    margin: 80px 450px;
+}
